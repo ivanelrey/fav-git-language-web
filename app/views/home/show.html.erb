@@ -1,0 +1,15 @@
+<div id="search">
+  <%= form_tag(fav_language_path, method: :get, remote: true) do %>
+    <%= label_tag(:git_username, 'Search for:') %>
+    <%= text_field_tag(:git_username, nil, placeholder: 'github username') %>
+    <%= submit_tag("Search", data: { disable_with: 'Please wait...' }) %>
+  <% end %>
+
+  <span>Favorite Language:</span><br>
+  <span id="result">***</span>
+</div>
+
+
+<div id="my-horse-list">
+  <%= render 'partials/horse_js' %>
+</div>
